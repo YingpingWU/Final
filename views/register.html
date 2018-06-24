@@ -1,0 +1,195 @@
+
+<html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>WeStayFit - Your private health consultant</title>
+      <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+      <link href="css/flexslider.css" rel="stylesheet" >
+      <link href="css/styles.css" rel="stylesheet">
+      <link href="css/queries.css" rel="stylesheet">
+      <link href="css/animate.css" rel="stylesheet">
+          <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+          <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+          <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+          <![endif]-->
+        </head>
+
+<body>
+
+
+        <section class="subscribe text-center">
+            <div class="container">
+              <h1><i class="fa fa-paper-plane"></i><span>Subscribe to join the lecture</span></h1>
+
+         
+              <form  name="addclient", method = "post", action="/addclient" >   
+                
+                
+                <input type="text" name="client" value="" placeholder="Name" required="">
+                <input type="text" name="email" value="" placeholder="E-mail" required="">
+                <input type="submit" name="" value="Send">
+                <div class="col-md-4"></div>
+
+                <div class="col-md-4">
+              <div  class="radio", style="color: #e8e4e4;", float="left">
+                <input type="radio" name="lecture" value="BE A BETTER SELF" checked> BE A BETTER SELF<br>
+                <input type="radio" name="lecture" value="BASIC CONCEPT OF BEING HELATHY"> BASIC CONCEPT OF BEING HELATHY<br>
+                <input type="radio" name="lecture" value="EAT WELL"> EAT WELL<br>
+                <input type="radio" name="lecture" value="HEALTHY RECIPES"> HEALTHY RECIPES<br>
+                <input type="radio" name="lecture" value="BEFORE YOU START TO WORKOUT"> BEFORE YOU START TO WORKOUT<br>
+                <input type="radio" name="lecture" value="STAY FIT WITH WE"> STAY FIT WITH WE<br>
+              </div>
+              </div>
+              
+              </form>
+
+          
+
+            </div>
+          </section>
+
+
+
+
+          <section class="dark-bg text-center section-padding contact-wrap" id="contact">
+            <a href="/" class="up-btn"><i class="fa fa-chevron-up"></i></a>
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <h1 class="arrow">I am going to attend</h1>
+                  <p id="demo">Click the lecture and send</p>
+
+                </div>
+              </div>
+
+
+            <div class="row contact-details">
+
+
+                <div class="col-md-4">
+                  <div class="light-box box-hover" style="background-color: #ffffff;" onclick="switchColor1(this)">
+                    <h2><i class="fa fa-paper-plane"></i><span>BE A BETTER SELF</span></h2>
+                    <p>2018/09/01 9:00AM  88 RUE MASSENA </p>
+                  </div>
+                </div>
+
+                <div class="col-md-4" >
+                  <div  class="light-box box-hover"  style="background-color: #ffffff;" onclick="switchColor1(this)" >
+                    <h2  ><i class="fa fa-paper-plane"></i><span >BASIC CONCEPT OF BEING HELATHY</span></h2>
+                    <p>2018/09/01 10:00AM  88 RUE MASSENA</p>
+                  </div>
+                </div>
+                      
+    
+                <div class="col-md-4">
+                  <div class="light-box box-hover"  style="background-color: #ffffff;" onclick="switchColor1(this)">
+                    <h2><i class="fa fa-paper-plane"></i><span>EAT WELL</span></h2>
+                    <p>2018/09/01 2:00PM  88 RUE MASSENA</a></p>
+                  </div>
+                </div>
+
+                <br><br> <br><br> <br><br><br><br> <br><br> <br><br>
+
+                <div class="col-md-4 ">
+                    <div class="light-box box-hover" style="background-color: #ffffff;" onclick="switchColor1(this)">
+                      <h2><i class="fa fa-paper-plane"></i><span>HEALTHY RECIPES</span></h2>
+                      <p>2018/09/01 4:00PM  88 RUE MASSENA</a></p>
+                    </div>
+                </div>
+                
+
+                <div class="col-md-4">
+                    <div class="light-box box-hover" style="background-color: #ffffff;" onclick="switchColor1(this)">
+                      <h2><i class="fa fa-paper-plane"></i><span>BEFORE YOU START TO WORKOUT</span></h2>
+                      <p>2018/09/01 5:00PM  88 RUE MASSENA</a></p>
+                    </div>
+                </div>
+
+
+                <div class="col-md-4">
+                        <div class="light-box box-hover" style="background-color: #ffffff;" onclick="switchColor1(this)" >
+                          <h2><i class="fa fa-paper-plane"></i><span>STAY FIT WITH WE</span></h2>
+                          <p>2018/09/01 6:00PM  88 RUE MASSENA</a></p>
+                        </div>
+                </div>
+
+                <script>
+                    var oldColor1;
+                    var oldword1;
+                    
+                    function switchColor1(el) {
+
+                      
+
+                      
+
+                       if (oldColor1) {      
+                                    
+                            el.style.backgroundColor = oldColor1;
+                            oldColor1 = null;
+                            document.getElementById("demo").innerHTML = oldword1
+                       } else {
+                           oldColor1 = el.style.backgroundColor;
+                           el.style.backgroundColor = '#ececec';
+
+                           oldword1=document.getElementById("demo").innerHTML;
+                           document.getElementById("demo").innerHTML ="You choose the lecture: " + el.innerHTML
+                       }
+
+
+
+              
+                    }
+                    </script>
+
+      
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+              <div class="row">
+                <div class="col-md-12">
+
+                </div>
+              </div>
+          </section>
+
+          
+        <footer>
+
+            <div class="container">
+  
+              <div class="row">
+                <div class="col-md-6">
+                  <ul class="legals">
+                    <li><a href="#">Terms &amp; Conditions</a></li>
+                    <li><a href="#">Legals</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-6 credit">
+                  <p>A student project of course <a href=#><em>Website creation</em></a></p>
+                </div>
+              </div>
+            </div>
+          </footer>
+
+
+          
+        </body>
+
+ </html>
+

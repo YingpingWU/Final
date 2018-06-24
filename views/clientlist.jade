@@ -1,0 +1,9 @@
+extends layout
+
+block content
+    h3.
+        clients
+    ul
+        each client, i in clientlist
+          li#client_list_item
+            a(href="#") client name: #{client.client}, E-mail account: #{client.email} Registered lecture: #{client.lecture}
